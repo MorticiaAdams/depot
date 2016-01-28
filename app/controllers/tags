@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ApplicationController	application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+CartsController	carts_controller.rb	/^class CartsController < ApplicationController$/;"	c
+LineItemsController	line_items_controller.rb	/^class LineItemsController < ApplicationController$/;"	c
+ProductsController	products_controller.rb	/^class ProductsController < ApplicationController$/;"	c
+StoreController	store_controller.rb	/^class StoreController < ApplicationController$/;"	c
+cart_params	carts_controller.rb	/^    def cart_params$/;"	f	class:CartsController
+create	carts_controller.rb	/^  def create$/;"	f	class:CartsController
+create	line_items_controller.rb	/^  def create$/;"	f	class:LineItemsController
+create	products_controller.rb	/^  def create$/;"	f	class:ProductsController
+current_cart	application_controller.rb	/^  def current_cart$/;"	f	class:ApplicationController
+destroy	carts_controller.rb	/^  def destroy$/;"	f	class:CartsController
+destroy	line_items_controller.rb	/^  def destroy$/;"	f	class:LineItemsController
+destroy	products_controller.rb	/^  def destroy$/;"	f	class:ProductsController
+edit	carts_controller.rb	/^  def edit$/;"	f	class:CartsController
+edit	line_items_controller.rb	/^  def edit$/;"	f	class:LineItemsController
+edit	products_controller.rb	/^  def edit$/;"	f	class:ProductsController
+index	carts_controller.rb	/^  def index$/;"	f	class:CartsController
+index	line_items_controller.rb	/^  def index$/;"	f	class:LineItemsController
+index	products_controller.rb	/^  def index$/;"	f	class:ProductsController
+index	store_controller.rb	/^  def index$/;"	f	class:StoreController
+line_item_params	line_items_controller.rb	/^    def line_item_params$/;"	f	class:LineItemsController
+new	carts_controller.rb	/^  def new$/;"	f	class:CartsController
+new	line_items_controller.rb	/^  def new$/;"	f	class:LineItemsController
+new	products_controller.rb	/^  def new$/;"	f	class:ProductsController
+product_params	products_controller.rb	/^    def product_params$/;"	f	class:ProductsController
+set_cart	carts_controller.rb	/^    def set_cart$/;"	f	class:CartsController
+set_line_item	line_items_controller.rb	/^    def set_line_item$/;"	f	class:LineItemsController
+set_product	products_controller.rb	/^    def set_product$/;"	f	class:ProductsController
+show	carts_controller.rb	/^  def show$/;"	f	class:CartsController
+show	line_items_controller.rb	/^  def show$/;"	f	class:LineItemsController
+show	products_controller.rb	/^  def show$/;"	f	class:ProductsController
+update	carts_controller.rb	/^  def update$/;"	f	class:CartsController
+update	line_items_controller.rb	/^  def update$/;"	f	class:LineItemsController
+update	products_controller.rb	/^  def update$/;"	f	class:ProductsController

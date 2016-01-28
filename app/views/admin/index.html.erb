@@ -1,0 +1,12 @@
+<h1>Welcome <%= User.find_by_id(session[:user_id]).name %></h1>
+
+<div class="info_line">
+    It's <%= Time.now.strftime("%Y %B %d") %>.
+    Currently, <%= pluralize(@total_orders, "order") %>
+    <% if @total_orders == 0 or @total_orders > 1 %>
+        are
+    <% else %>
+        is
+    <% end %>
+    archived.
+</div>

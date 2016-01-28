@@ -1,0 +1,12 @@
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<p>
+<strong>Email:</strong>
+<% if @customer %>
+    <%= @customer.email %>
+<% else %>
+    <%= @order.email %>
+<% end %>
+</p>

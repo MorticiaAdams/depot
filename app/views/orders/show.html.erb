@@ -1,0 +1,43 @@
+<h1>Order <%= "#{@order.id}" %></h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<%= render 'customer' %>
+
+<p>
+  <strong>Pay type:</strong>
+  <%= @order.pay_type %>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product number</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Title - description</th>
+            <th colspan="5"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @order_details.each do |ordered_item| %>
+            <tr class="<% cycle('list_line_odd', 'list_line_even') %>">
+                <td><%= ordered_item.product_id %></td>
+                <td><%= ordered_item.quantity %></td>
+                <td class="price">
+                    <%= number_to_currency(ordered_item.product.price) %>
+                </td>
+                <td>
+                    <%= truncate(ordered_item.product.title, length: 80) %><br>
+                    <%= sanitize(ordered_item.product.description) %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

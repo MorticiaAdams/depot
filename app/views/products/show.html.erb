@@ -1,8 +1,15 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
 
 <p>
   <strong>Title:</strong>
   <%= @product.title %>
+</p>
+
+<p>
+    <strong>Product number:</strong>
+    <%= @product.id %>
 </p>
 
 <p>
@@ -17,8 +24,14 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  <span class="price"><%= number_to_currency(@product.price) %></span> 
+</p>
+<p>
+    <strong>Quantity sold:</strong>
+    <%= @product.quantity_sold %>
 </p>
 
+<div class=info_line>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+</div>

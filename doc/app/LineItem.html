@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class LineItem - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">ActiveRecord::Base
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-total_price">#total_price</a>
+    
+    <li ><a href="#method-i-total_product_quantity_sold">#total_product_quantity_sold</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-LineItem">
+  <h1 id="class-LineItem" class="class">
+    class LineItem
+  </h1>
+
+  <section class="description">
+    
+<h2 id="class-LineItem-label-Schema+Information">Schema Information<span><a href="#class-LineItem-label-Schema+Information">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Table name: line_items</p>
+
+<pre>id         :integer          not null, primary key
+product_id :integer
+cart_id    :integer
+created_at :datetime         not null
+updated_at :datetime         not null
+quantity   :integer          default(1)
+order_id   :integer</pre>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-total_price" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">total_price</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="total_price-source">
+            <pre><span class="ruby-comment"># File app/models/line_item.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">total_price</span>
+    <span class="ruby-identifier">product</span>.<span class="ruby-identifier">price</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">quantity</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-total_product_quantity_sold" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">total_product_quantity_sold</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="total_product_quantity_sold-source">
+            <pre><span class="ruby-comment"># File app/models/line_item.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">total_product_quantity_sold</span>
+    <span class="ruby-comment">#Order.where(&#39;product_id == ?&#39;, LineItem.sales[0])</span>
+    <span class="ruby-identifier">sales_info</span> = <span class="ruby-constant">LineItem</span>.<span class="ruby-identifier">sales</span>.<span class="ruby-identifier">select</span> {
+        <span class="ruby-operator">|</span><span class="ruby-identifier">product</span>, <span class="ruby-identifier">quantity</span><span class="ruby-operator">|</span> <span class="ruby-identifier">product</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">product_id</span>
+    }
+    <span class="ruby-identifier">product_quantity_sold</span> = <span class="ruby-identifier">sales_info</span>.<span class="ruby-identifier">map</span> {
+        <span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">element</span>[<span class="ruby-value">1</span>] 
+    }[<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

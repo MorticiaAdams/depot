@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  name            :string
+#  password_digest :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  activated       :boolean          default(FALSE)
+#  locked          :boolean          default(FALSE)
+#  last_visit      :datetime
+#  email           :string
+#  salt            :string
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Dave Krinkle    
+  password_digest: <%= BCrypt::Password.create('secret') %>
+  email: dk@santa.org    
+
+two:
+  name: Cynthia Krinkle
+  password_digest: <%= BCrypt::Password.create('top_secret') %>
+  email: ck@santa.org    

@@ -1,0 +1,60 @@
+[1m[1;34mActiveSupport::Configurable#methods[0m[0m: config
+[1m[1;34mAbstractController::Base#methods[0m[0m: action_methods  action_name  action_name=  available_action?  controller_path  response_body
+[1m[1;34mActionController::Metal#methods[0m[0m: controller_name  env  env=  headers=  middleware_stack  middleware_stack=  middleware_stack?  performed?  request  request=  response  response=  session  to_a
+[1m[1;34mActionView::ViewPaths#methods[0m[0m: _prefixes  append_view_path  details_for_lookup  formats  formats=  locale  locale=  lookup_context  prepend_view_path  template_exists?  view_paths
+[1m[1;34mAbstractController::Rendering#methods[0m[0m: _normalize_render  view_assigns
+[1m[1;34mAbstractController::Translation#methods[0m[0m: l  localize  t  translate
+[1m[1;34mActionController::ModelNaming#methods[0m[0m: convert_to_model  model_name_from_record_or_class
+[1m[1;34mActionDispatch::Routing::PolymorphicRoutes#methods[0m[0m: edit_polymorphic_path  edit_polymorphic_url  new_polymorphic_path  new_polymorphic_url  polymorphic_path  polymorphic_url
+[1m[1;34mActionDispatch::Routing::UrlFor#methods[0m[0m: url_for
+[1m[1;34mActionController::UrlFor#methods[0m[0m: url_options
+[1m[1;34mActiveSupport::Benchmarkable#methods[0m[0m: benchmark
+[1m[1;34mActionController::RackDelegation#methods[0m[0m: content_type  content_type=  dispatch  headers  location  location=  reset_session  response_body=  response_code  status  status=
+[1m[1;34mActionView::Rendering#methods[0m[0m: process  rendered_format  view_context  view_context_class  view_context_class=  view_renderer
+[1m[1;34mActionView::Layouts#methods[0m[0m: _layout_conditions  action_has_layout=  action_has_layout?
+[1m[1;34mActionController::Rendering#methods[0m[0m: render_to_string
+[1m[1;34mActionController::Renderers#methods[0m[0m: _render_to_body_with_renderer  _render_with_renderer_js  _render_with_renderer_json  _render_with_renderer_xml  render_to_body
+[1m[1;34mActionController::Head#methods[0m[0m: head
+[1m[1;34mActionController::ConditionalGet#methods[0m[0m: expires_in  expires_now  fresh_when  stale?
+[1m[1;34mActiveSupport::Callbacks#methods[0m[0m: run_callbacks
+[1m[1;34mActionController::Caching::ConfigMethods#methods[0m[0m: cache_store  cache_store=
+[1m[1;34mActionController::Caching::Fragments#methods[0m[0m: expire_fragment  fragment_cache_key  fragment_exist?  instrument_fragment_cache  read_fragment  write_fragment
+[1m[1;34mActionController::Caching#methods[0m[0m: view_cache_dependencies
+[1m[1;34mActionController::MimeResponds#methods[0m[0m: respond_to  respond_with
+[1m[1;34mActionController::ImplicitRender#methods[0m[0m: default_render  method_for_action  send_action
+[1m[1;34mActiveSupport::Rescuable#methods[0m[0m: handler_for_rescue
+[1m[1;34mActionController::StrongParameters#methods[0m[0m: params  params=
+[1m[1;34mActionController::ForceSSL#methods[0m[0m: force_ssl_redirect
+[1m[1;34mActionController::HttpAuthentication::Basic::ControllerMethods#methods[0m[0m: authenticate_or_request_with_http_basic  authenticate_with_http_basic  request_http_basic_authentication
+[1m[1;34mActionController::HttpAuthentication::Digest::ControllerMethods#methods[0m[0m: authenticate_or_request_with_http_digest  authenticate_with_http_digest  request_http_digest_authentication
+[1m[1;34mActionController::HttpAuthentication::Token::ControllerMethods#methods[0m[0m: authenticate_or_request_with_http_token  authenticate_with_http_token  request_http_token_authentication
+[1m[1;34mActionController::Rescue#methods[0m[0m: rescue_with_handler  show_detailed_exceptions?
+[1m[1;34mActionController::Instrumentation#methods[0m[0m: redirect_to  render  send_data  send_file  view_runtime  view_runtime=
+[1m[1;34mActionDispatch::Routing::RouteSet::MountedHelpers#methods[0m[0m: _main_app  main_app
+[1m[1;34mActiveRecord::Railties::ControllerRuntime#methods[0m[0m: db_runtime  db_runtime=
+[1m[1;34mWebConsole::Helper#methods[0m[0m: console
+[1m[1;34mTurbolinks::Redirection#methods[0m[0m: redirect_via_turbolinks_to
+[1m[1;34mTurbolinks::XHRHeaders#methods[0m[0m: _compute_redirect_to_location
+[1m[1;34mActionController::Base#methods[0m[0m: 
+  _helper_methods             _renderers                     _wrapper_options           default_asset_host_protocol   etaggers                      hidden_actions=               logger=                            rescue_handlers?
+  _helper_methods=            _renderers=                    _wrapper_options=          default_asset_host_protocol=  etaggers=                     hidden_actions?               notice                             stylesheets_dir 
+  _helper_methods?            _renderers?                    _wrapper_options?          default_static_extension      etaggers?                     include_all_helpers           perform_caching                    stylesheets_dir=
+  _helpers                    _run_process_action_callbacks  alert                      default_static_extension=     flash                         include_all_helpers=          perform_caching=                 
+  _helpers=                   _view_cache_dependencies       allow_forgery_protection   default_url_options           forgery_protection_strategy   include_all_helpers?          relative_url_root                
+  _helpers?                   _view_cache_dependencies=      allow_forgery_protection=  default_url_options=          forgery_protection_strategy=  javascripts_dir               relative_url_root=               
+  _process_action_callbacks   _view_cache_dependencies?      asset_host                 default_url_options?          helpers_path                  javascripts_dir=              request_forgery_protection_token 
+  _process_action_callbacks=  _view_paths                    asset_host=                etag_with_template_digest     helpers_path=                 log_warning_on_csrf_failure   request_forgery_protection_token=
+  _process_action_callbacks?  _view_paths=                   assets_dir                 etag_with_template_digest=    helpers_path?                 log_warning_on_csrf_failure=  rescue_handlers                  
+  _protected_ivars            _view_paths?                   assets_dir=                etag_with_template_digest?    hidden_actions                logger                        rescue_handlers=                 
+[1m[1;34m#<Module:0x000000035564e8>#methods[0m[0m: 
+  admin_url  edit_cart_url       edit_product_url  line_items_url  new_cart_url       new_product_url  orders_url    rails_info_properties_url  rails_mailers_url  users_url             
+  cart_url   edit_line_item_url  edit_user_url     login_url       new_line_item_url  new_user_url     product_url   rails_info_routes_url      store_url          who_bought_product_url
+  carts_url  edit_order_url      line_item_url     logout_url      new_order_url      order_url        products_url  rails_info_url             user_url         
+[1m[1;34m#<Module:0x000000035564c0>#methods[0m[0m: 
+  admin_path  edit_cart_path       edit_product_path  line_items_path  new_cart_path       new_product_path  orders_path    rails_info_path             rails_mailers_path  users_path             
+  cart_path   edit_line_item_path  edit_user_path     login_path       new_line_item_path  new_user_path     product_path   rails_info_properties_path  store_path          who_bought_product_path
+  carts_path  edit_order_path      line_item_path     logout_path      new_order_path      order_path        products_path  rails_info_routes_path      user_path         
+[1m[1;34m#<Module:0x007f4186658280>#methods[0m[0m: _routes
+[1m[1;34mOrdersController#methods[0m[0m: create  destroy  edit  index  new  show  update
+[1m[1;34minstance variables[0m[0m: [0;34m@_action_has_layout[0m  [0;34m@_action_name[0m  [0;34m@_config[0m  [0;34m@_env[0m  [0;34m@_headers[0m  [0;34m@_lookup_context[0m  [0;34m@_params[0m  [0;34m@_request[0m  [0;34m@_response[0m  [0;34m@_response_body[0m  [0;34m@_routes[0m  [0;34m@_status[0m  [0;34m@marked_for_same_origin_verification[0m
+[1m[1;34mlocals[0m[0m: _  __  _dir_  _ex_  _file_  _in_  _out_  _pry_

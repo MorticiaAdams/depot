@@ -1,0 +1,123 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Ability	app/models/ability.rb	/^class Ability$/;"	c
+AdminController	app/controllers/admin_controller.rb	/^class AdminController < ApplicationController$/;"	c
+AdminHelper	app/helpers/admin_helper.rb	/^module AdminHelper$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+Cart	app/models/cart.rb	/^class Cart < ActiveRecord::Base$/;"	c
+CartsController	app/controllers/carts_controller.rb	/^class CartsController < ApplicationController$/;"	c
+CartsHelper	app/helpers/carts_helper.rb	/^module CartsHelper$/;"	m
+CurrentCart	app/controllers/concerns/current_cart.rb	/^module CurrentCart extend ActiveSupport::Concern$/;"	m
+LineItem	app/models/line_item.rb	/^class LineItem < ActiveRecord::Base$/;"	c
+LineItemsController	app/controllers/line_items_controller.rb	/^class LineItemsController < ApplicationController$/;"	c
+LineItemsHelper	app/helpers/line_items_helper.rb	/^module LineItemsHelper$/;"	m
+Order	app/models/order.rb	/^class Order < ActiveRecord::Base$/;"	c
+Ordernotifier	app/mailers/ordernotifier.rb	/^class Ordernotifier < ApplicationMailer$/;"	c
+OrdersController	app/controllers/orders_controller.rb	/^class OrdersController < ApplicationController$/;"	c
+OrdersHelper	app/helpers/orders_helper.rb	/^module OrdersHelper$/;"	m
+Product	app/models/product.rb	/^class Product < ActiveRecord::Base$/;"	c
+ProductsController	app/controllers/products_controller.rb	/^class ProductsController < ApplicationController$/;"	c
+ProductsHelper	app/helpers/products_helper.rb	/^module ProductsHelper$/;"	m
+Role	app/models/role.rb	/^class Role < ActiveRecord::Base$/;"	c
+RolesController	app/controllers/roles_controller.rb	/^class RolesController < ApplicationController$/;"	c
+RolesHelper	app/helpers/roles_helper.rb	/^module RolesHelper$/;"	m
+SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
+StoreController	app/controllers/store_controller.rb	/^class StoreController < ApplicationController$/;"	c
+StoreHelper	app/helpers/store_helper.rb	/^module StoreHelper$/;"	m
+User	app/models/user.rb	/^class User < ActiveRecord::Base$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+add_line_items_from_cart	app/models/order.rb	/^    def add_line_items_from_cart(cart)$/;"	f	class:Order
+add_product	app/models/cart.rb	/^    def add_product (product_id)$/;"	f	class:Cart
+admin?	app/models/user.rb	/^    def admin?$/;"	f	class:User
+assign_role	app/models/user.rb	/^    def assign_role$/;"	f	class:User
+authorize	app/controllers/application_controller.rb	/^    def authorize$/;"	f	class:ApplicationController
+banned?	app/models/user.rb	/^    def banned?$/;"	f	class:User
+cart_params	app/controllers/carts_controller.rb	/^    def cart_params$/;"	f	class:CartsController
+clear_password	app/models/user.rb	/^    def clear_password$/;"	f	class:User
+configure_permitted_parameters	app/controllers/application_controller.rb	/^    def configure_permitted_parameters$/;"	f	class:ApplicationController
+create	app/controllers/carts_controller.rb	/^    def create$/;"	f	class:CartsController
+create	app/controllers/line_items_controller.rb	/^  def create$/;"	f	class:LineItemsController
+create	app/controllers/orders_controller.rb	/^    def create$/;"	f	class:OrdersController
+create	app/controllers/products_controller.rb	/^  def create$/;"	f	class:ProductsController
+create	app/controllers/roles_controller.rb	/^    def create$/;"	f	class:RolesController
+create	app/controllers/sessions_controller.rb	/^    def create $/;"	f	class:SessionsController
+create	app/controllers/users_controller.rb	/^    def create$/;"	f	class:UsersController
+current_cart	app/controllers/application_controller.rb	/^    def current_cart$/;"	f	class:ApplicationController
+customer?	app/models/user.rb	/^    def customer?$/;"	f	class:User
+destroy	app/controllers/carts_controller.rb	/^    def destroy$/;"	f	class:CartsController
+destroy	app/controllers/line_items_controller.rb	/^  def destroy$/;"	f	class:LineItemsController
+destroy	app/controllers/orders_controller.rb	/^    def destroy$/;"	f	class:OrdersController
+destroy	app/controllers/products_controller.rb	/^  def destroy$/;"	f	class:ProductsController
+destroy	app/controllers/roles_controller.rb	/^  def destroy$/;"	f	class:RolesController
+destroy	app/controllers/sessions_controller.rb	/^    def destroy$/;"	f	class:SessionsController
+destroy	app/controllers/users_controller.rb	/^    def destroy$/;"	f	class:UsersController.update
+edit	app/controllers/carts_controller.rb	/^    def edit$/;"	f	class:CartsController
+edit	app/controllers/line_items_controller.rb	/^  def edit$/;"	f	class:LineItemsController
+edit	app/controllers/orders_controller.rb	/^    def edit$/;"	f	class:OrdersController
+edit	app/controllers/products_controller.rb	/^  def edit$/;"	f	class:ProductsController
+edit	app/controllers/roles_controller.rb	/^    def edit$/;"	f	class:RolesController
+edit	app/controllers/users_controller.rb	/^    def edit$/;"	f	class:UsersController
+ensure_an_admin_remains	app/models/user.rb	/^    def ensure_an_admin_remains$/;"	f	class:User
+ensure_not_referenced_by_any_line_item	app/models/product.rb	/^    def ensure_not_referenced_by_any_line_item$/;"	f	class:Product
+give_time	app/controllers/application_controller.rb	/^    def give_time$/;"	f	class:ApplicationController
+hidden_div_if	app/helpers/application_helper.rb	/^    def hidden_div_if(condition, attributes = (), &block)$/;"	f	class:ApplicationHelper
+index	app/controllers/admin_controller.rb	/^    def index$/;"	f	class:AdminController
+index	app/controllers/carts_controller.rb	/^    def index$/;"	f	class:CartsController
+index	app/controllers/line_items_controller.rb	/^  def index$/;"	f	class:LineItemsController
+index	app/controllers/orders_controller.rb	/^    def index$/;"	f	class:OrdersController
+index	app/controllers/products_controller.rb	/^  def index$/;"	f	class:ProductsController
+index	app/controllers/roles_controller.rb	/^    def index$/;"	f	class:RolesController
+index	app/controllers/store_controller.rb	/^    def index$/;"	f	class:StoreController
+index	app/controllers/users_controller.rb	/^    def index$/;"	f	class:UsersController
+initialize	app/models/ability.rb	/^  def initialize(user)$/;"	f	class:Ability
+invalid_cart	app/controllers/carts_controller.rb	/^    def invalid_cart$/;"	f	class:CartsController
+is?	app/models/user.rb	/^    def is?( requested_role )$/;"	f	class:User
+is_admin?	app/helpers/application_helper.rb	/^    def is_admin?(user)$/;"	f	class:ApplicationHelper
+line_item_params	app/controllers/line_items_controller.rb	/^  def line_item_params$/;"	f	class:LineItemsController
+log_visited_time	app/models/user.rb	/^    def log_visited_time$/;"	f	class:User
+moderator?	app/models/user.rb	/^    def moderator?$/;"	f	class:User
+needs_password?	app/controllers/users_controller.rb	/^    def needs_password?(user, params)$/;"	f	class:UsersController.update
+new	app/controllers/carts_controller.rb	/^    def new$/;"	f	class:CartsController
+new	app/controllers/line_items_controller.rb	/^  def new$/;"	f	class:LineItemsController
+new	app/controllers/orders_controller.rb	/^    def new$/;"	f	class:OrdersController
+new	app/controllers/products_controller.rb	/^  def new$/;"	f	class:ProductsController
+new	app/controllers/roles_controller.rb	/^    def new$/;"	f	class:RolesController
+new	app/controllers/users_controller.rb	/^    def new$/;"	f	class:UsersController
+normalize_credit_card_number	app/models/order.rb	/^    def normalize_credit_card_number$/;"	f	class:Order
+order_params	app/controllers/orders_controller.rb	/^    def order_params$/;"	f	class:OrdersController
+product_params	app/controllers/products_controller.rb	/^  def product_params$/;"	f	class:ProductsController
+quantity_sold	app/models/product.rb	/^    def quantity_sold$/;"	f	class:Product
+received	app/mailers/ordernotifier.rb	/^  def received(order)$/;"	f	class:Ordernotifier
+role_params	app/controllers/roles_controller.rb	/^    def role_params$/;"	f	class:RolesController.set_role
+set_cart	app/controllers/concerns/current_cart.rb	/^    def set_cart $/;"	f	class:CurrentCart
+set_line_item	app/controllers/line_items_controller.rb	/^  def set_line_item$/;"	f	class:LineItemsController
+set_order	app/controllers/orders_controller.rb	/^    def set_order$/;"	f	class:OrdersController
+set_product	app/controllers/products_controller.rb	/^  def set_product$/;"	f	class:ProductsController
+set_role	app/controllers/roles_controller.rb	/^    def set_role$/;"	f	class:RolesController
+set_user	app/controllers/users_controller.rb	/^    def set_user$/;"	f	class:UsersController.update
+shipped	app/mailers/ordernotifier.rb	/^  def shipped(order)$/;"	f	class:Ordernotifier
+show	app/controllers/carts_controller.rb	/^    def show$/;"	f	class:CartsController
+show	app/controllers/line_items_controller.rb	/^  def show$/;"	f	class:LineItemsController
+show	app/controllers/orders_controller.rb	/^    def show$/;"	f	class:OrdersController
+show	app/controllers/products_controller.rb	/^  def show$/;"	f	class:ProductsController
+show	app/controllers/roles_controller.rb	/^    def show$/;"	f	class:RolesController
+show	app/controllers/users_controller.rb	/^    def show$/;"	f	class:UsersController
+total_price	app/models/cart.rb	/^    def total_price$/;"	f	class:Cart
+total_price	app/models/line_item.rb	/^    def total_price$/;"	f	class:LineItem
+total_product_quantity_sold	app/models/line_item.rb	/^    def total_product_quantity_sold$/;"	f	class:LineItem
+update	app/controllers/carts_controller.rb	/^    def update$/;"	f	class:CartsController
+update	app/controllers/line_items_controller.rb	/^  def update$/;"	f	class:LineItemsController
+update	app/controllers/orders_controller.rb	/^    def update$/;"	f	class:OrdersController
+update	app/controllers/products_controller.rb	/^  def update$/;"	f	class:ProductsController
+update	app/controllers/roles_controller.rb	/^  def update$/;"	f	class:RolesController
+update	app/controllers/users_controller.rb	/^    def update$/;"	f	class:UsersController
+user_params	app/controllers/users_controller.rb	/^    def user_params$/;"	f	class:UsersController.update
+who_bought	app/controllers/products_controller.rb	/^  def who_bought$/;"	f	class:ProductsController

@@ -1,0 +1,154 @@
+Run options: --seed 2795
+
+# Running:
+
+.E.......E..E...E.EEE.EFE....E...EEF.FF.F...EEE
+
+Finished in 2.485692s, 18.9082 runs/s, 22.5289 assertions/s.
+
+  1) Error:
+ProductsControllerTest#test_should_get_new:
+ActionView::Template::Error: First argument in form cannot contain nil or be empty
+    app/views/products/_form.html.erb:1:in `_app_views_products__form_html_erb___4603991862592712278_47130180'
+    app/views/products/new.html.erb:3:in `_app_views_products_new_html_erb__3566945809946478575_47045100'
+    test/controllers/products_controller_test.rb:34:in `block in <class:ProductsControllerTest>'
+
+
+  2) Error:
+LineItemsControllerTest#test_should_create_line_item:
+StandardError: No fixture named 'ruby' found for fixture set 'products'
+    test/controllers/line_items_controller_test.rb:23:in `block (2 levels) in <class:LineItemsControllerTest>'
+    test/controllers/line_items_controller_test.rb:22:in `block in <class:LineItemsControllerTest>'
+
+
+  3) Error:
+LineItemsControllerTest#test_should_create_line_item_via_ajax:
+StandardError: No fixture named 'ruby' found for fixture set 'products'
+    test/controllers/line_items_controller_test.rb:31:in `block (2 levels) in <class:LineItemsControllerTest>'
+    test/controllers/line_items_controller_test.rb:30:in `block in <class:LineItemsControllerTest>'
+
+
+  4) Error:
+OrdersControllerTest#test_should_create_order:
+NoMethodError: undefined method `line_items' for 980190963:Fixnum
+    app/models/order.rb:27:in `add_line_items_from_cart'
+    app/controllers/orders_controller.rb:66:in `create'
+    test/controllers/orders_controller_test.rb:38:in `block (2 levels) in <class:OrdersControllerTest>'
+    test/controllers/orders_controller_test.rb:37:in `block in <class:OrdersControllerTest>'
+
+
+  5) Error:
+OrdersControllerTest#test_should_get_new:
+StandardError: No fixture named 'ruby' found for fixture set 'products'
+    test/controllers/orders_controller_test.rb:30:in `block in <class:OrdersControllerTest>'
+
+
+  6) Error:
+OrdersControllerTest#test_should_get_edit:
+ActionView::Template::Error: First argument in form cannot contain nil or be empty
+    app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb__2800298286547931126_68360120'
+    app/views/orders/edit.html.erb:3:in `_app_views_orders_edit_html_erb__3603698704945245007_68343540'
+    test/controllers/orders_controller_test.rb:50:in `block in <class:OrdersControllerTest>'
+
+
+  7) Error:
+OrdersControllerTest#test_should_show_order:
+ActionView::Template::Error: undefined method `price' for nil:NilClass
+    app/views/orders/show.html.erb:31:in `block in _app_views_orders_show_html_erb__2610189496110320723_57108220'
+    app/views/orders/show.html.erb:26:in `_app_views_orders_show_html_erb__2610189496110320723_57108220'
+    test/controllers/orders_controller_test.rb:45:in `block in <class:OrdersControllerTest>'
+
+
+  8) Error:
+OrdersControllerTest#test_requires_item_in_cart:
+NoMethodError: undefined method `line_items' for 980190963:Fixnum
+    app/controllers/orders_controller.rb:46:in `new'
+    test/controllers/orders_controller_test.rb:68:in `block in <class:OrdersControllerTest>'
+
+
+  9) Failure:
+CartsControllerTest#test_should_destroy_cart [/home/fradiavolo/Projects/Ruby/depot/test/controllers/carts_controller_test.rb:52]:
+"Cart.count" didn't change by -1.
+Expected: 1
+  Actual: 2
+
+
+ 10) Error:
+CartsControllerTest#test_should_get_edit:
+ActionView::Template::Error: First argument in form cannot contain nil or be empty
+    app/views/carts/_form.html.erb:1:in `_app_views_carts__form_html_erb___2706769348285165633_56041780'
+    app/views/carts/edit.html.erb:3:in `_app_views_carts_edit_html_erb__2766236960713551381_69017360'
+    test/controllers/carts_controller_test.rb:42:in `block in <class:CartsControllerTest>'
+
+
+ 11) Error:
+CartsControllerTest#test_should_show_cart:
+ActionView::Template::Error: undefined method `title' for nil:NilClass
+    app/views/line_items/_line_item.html.erb:11:in `_app_views_line_items__line_item_html_erb__4325910493973765150_54713400'
+    app/views/carts/show.html.erb:7:in `_app_views_carts_show_html_erb__4202955654486727260_54823580'
+    app/controllers/carts_controller.rb:37:in `show'
+    test/controllers/carts_controller_test.rb:37:in `block in <class:CartsControllerTest>'
+
+
+ 12) Error:
+UsersControllerTest#test_should_update_user:
+ActionController::ParameterMissing: param is missing or the value is empty: user
+    app/controllers/users_controller.rb:107:in `user_params'
+    app/controllers/users_controller.rb:64:in `block in update'
+    app/controllers/users_controller.rb:63:in `update'
+    test/controllers/users_controller_test.rb:54:in `block in <class:UsersControllerTest>'
+
+
+ 13) Error:
+UsersControllerTest#test_should_create_user:
+ActionController::ParameterMissing: param is missing or the value is empty: user
+    app/controllers/users_controller.rb:107:in `user_params'
+    app/controllers/users_controller.rb:45:in `create'
+    test/controllers/users_controller_test.rb:37:in `block (2 levels) in <class:UsersControllerTest>'
+    test/controllers/users_controller_test.rb:36:in `block in <class:UsersControllerTest>'
+
+
+ 14) Failure:
+UsersControllerTest#test_should_destroy_user [/home/fradiavolo/Projects/Ruby/depot/test/controllers/users_controller_test.rb:59]:
+"User.count" didn't change by -1.
+Expected: 1
+  Actual: 2
+
+
+ 15) Failure:
+StoreControllerTest#test_markup_needed_for_store.js.coffee_is_in_place [/home/fradiavolo/Projects/Ruby/depot/test/controllers/store_controller_test.rb:15]:
+Expected exactly 3 elements matching ".store .entry > img", found 0..
+Expected: 3
+  Actual: 0
+
+
+ 16) Failure:
+StoreControllerTest#test_should_get_index [/home/fradiavolo/Projects/Ruby/depot/test/controllers/store_controller_test.rb:8]:
+Expected exactly 3 elements matching "#main .entry", found 1..
+Expected: 3
+  Actual: 1
+
+
+ 17) Failure:
+SessionsControllerTest#test_should_get_destroy [/home/fradiavolo/Projects/Ruby/depot/test/controllers/sessions_controller_test.rb:29]:
+Expected response to be a <success>, but was <302>
+
+
+ 18) Error:
+LoginControllerTest#test_should_get_index:
+ActionController::UrlGenerationError: No route matches {:action=>"index", :controller=>"login"}
+    test/controllers/login_controller_test.rb:15:in `block in <class:LoginControllerTest>'
+
+
+ 19) Error:
+LoginControllerTest#test_should_get_signoff:
+ActionController::UrlGenerationError: No route matches {:action=>"signoff", :controller=>"login"}
+    test/controllers/login_controller_test.rb:10:in `block in <class:LoginControllerTest>'
+
+
+ 20) Error:
+LoginControllerTest#test_should_get_signon:
+ActionController::UrlGenerationError: No route matches {:action=>"signon", :controller=>"login"}
+    test/controllers/login_controller_test.rb:5:in `block in <class:LoginControllerTest>'
+
+47 runs, 56 assertions, 5 failures, 15 errors, 0 skips

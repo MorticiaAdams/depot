@@ -1,0 +1,41 @@
+<h1>
+    Listing <%= pluralize(@users.count, "user") %>
+</h1>
+
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>e-mail</th>
+            <th>Registration date</th>
+            <th>last_visit</th>
+            <th colspan="4"></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @users.each do |user| %>
+            <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.created_at.strftime("%Y %B %d") %></td>
+            <td><%= user.last_visit.strftime('%Y %B %d') %></td>
+            <td><%= link_to 'Show', user %></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
+<p><%= will_paginate @users %></p>

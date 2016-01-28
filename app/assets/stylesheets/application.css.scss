@@ -1,0 +1,207 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+$darkblue : #2cafe3;
+$banner-green: #9c9;
+$sidebar-green: #459045; //114411;
+$light-green : #eaf4e7;
+$green: #41db1e;
+$dark-green: #141;
+
+@mixin grid-unit($span) {
+
+    float: left;
+    margin-right: $gutter-width;
+    width: ($column-width * $span) + ($gutter-width * ($span - 1));
+
+}
+
+@mixin text-field {
+
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    @include rounded();
+    @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+
+}
+
+@mixin button($color: $red, $text_color: $white) {
+
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    @include rounded();
+    @include box-shadow(0, 1px, 2px, rgba(0, 0, 0, 0.2));
+
+    color: $text_color !important;
+    font-weight: bold;
+    border: solid 1px darken($color, 18%);
+    background: $color;
+    @include gradient(saturate($color, 15%), darken($color, 15%));
+
+    &:hover {
+
+        text-decoration: none;
+        background: saturate($color, 10%);
+        @include gradient(saturate($color, 5%), darken($color, 5%));
+
+    }
+
+    &:active {
+
+        position: relative;
+        top: 1px;
+        color: saturate($color, 15%);
+        @include gradient(saturate($color, 15%), lighten($color, 15%));
+
+    }
+
+}
+
+#banner {
+    background: $banner-green;
+    padding: 10px;
+    border-bottom: 2px solid;
+    font: small-caps 40px/40px"Times New Roman", serif;
+    color: #282;
+    text-align: center;
+
+    img {
+        float: left;
+    }
+}
+
+#notice {
+    color: #000 !important;
+    border: 2px solid red;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #f0f0f0;
+    font: bold smaller sans-serif;
+}
+
+#columns {
+    background: $sidebar-green;
+
+    #main {
+        margin-left: 17em;
+        padding: 1em;
+        background: white;
+    }
+
+    #side {
+        float: left;
+        padding: 1em 2em;
+        width: 13em;
+        background: $sidebar-green;
+
+        form, div {
+            display: inline;
+        }
+
+        input {
+            font-size: small;
+        }
+
+        #cart {
+            font-size: smaller;
+            color: white;
+
+            table {
+                border-top: 1px dotted #595;
+                border-margin: 1px dotted #595;
+                margin-bottom: 10px;
+            }
+        }
+
+        ul {
+            padding: 0;
+            li {
+                list-style: none;
+                a {
+                    color: #bfb;
+                    font-size: small;
+                }
+            }
+        }
+
+        #time-stamp {
+            color: white;
+        }
+    }
+}
+
+.depot_form {
+    fieldset {
+        background: $light-green;
+
+        legend {
+            color: #dfd;
+            background: #141;
+            font-family: sans-serif;
+            padding: 0.2em 1em;
+        }
+    }
+
+    form {
+        label {
+            width: 5em;
+            float: left;
+            text-align: right;
+            padding-top: 0.2em;
+            margin-right: 0.1em;
+            display: block;
+        }
+
+        select, textarea, input {
+            margin-left: 0.5em;
+        }
+        .submit {
+            margin-left: 4em;
+        }
+        br {
+            display: none
+        }
+    }
+}
+
+.locale {
+    float: right;
+    margin: -0.25em 0.1em;
+}
+
+.info_line {
+    float: left;
+    font-size: small;
+    color: $darkblue 100%;
+}
+
+.button {
+    background-color: $green;  // fallback
+    background-image: gradient(
+    hsl(40, 43%, 82%),  // highlight
+    $green,
+    hsl(20, 41%, 39%)  // shadowing
+    );
+}

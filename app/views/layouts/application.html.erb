@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Depot</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<body class='<%= controller.controller_name %>'>
-<%= yield %>
+    <head>
+        <%
+          # Search engine friendly header with a title and description.
+        %>
+        <title><%= content_for?(:title) ? yield(:title) : "The Pragmatic Bookstore" %></title>
+        <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Experimental Rails App" %>">
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
+    </head >
 
-</body>
-</html>
+    <body class = "<%= controller.controller_name %>#<%= action_name %>">
+        <div id="banner">
+            <%= image_tag("logo.png") %>
+            <%= @page_title || "The Pragmatic Bookstore" %>
+        </div>
+        <div id="columns">
+            <div id="side">
+                <div id="cart">
+                    <% if @cart %>
+                         <%= hidden_div_if(@cart.line_items.empty?, :id => "cart" ) do %>
+                             <%= render @cart %>
+                         <% end %>
+                    <% end %>
+                </div>
+                <ul>
+                    <li><%= link_to t('.home'), store_path%></li>
+                    <li><%= link_to t('.questions'), "#" %></li>
+                    <li><%= link_to t('.news'), "#" %></li>
+                    <li><%= link_to t('.contact'), "#" %></li>
+                </ul>
+                <br>
+                <% if session[:user_id] %>
+                    <ul>
+                        <li><%= link_to 'Orders', orders_path %></li>
+                        <li><%= link_to 'Products', products_path %></li>
+                        <li><%= link_to 'Users', users_path %></li>
+                    </ul>
+                    <div class="button">
+                        <%= button_to 'Log out', logout_path, method: :delete %>
+                    </div>
+                    <br />
+                    <div id="time-stamp" ><%= render :partial => 'shared/time_portion' %></div>
+                <% else %>
+                    <div class="button" >
+                        <%= button_to "Log in", login_path %>
+                    </div>
+                <% end %>
+            </div>
+            <div id="main">
+                <%= yield %>
+            </div>
+        </div>
+    </body>
+</html
+

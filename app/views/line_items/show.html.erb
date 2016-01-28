@@ -1,0 +1,16 @@
+<<%= render 'form' %>
+
+<div class="label">
+    <strong>Product:</strong>
+    <%= @line_item.product_id %>
+</div>
+
+<div class="label" >
+    <strong>Cart:</strong>
+    <%= @line_item.cart_id %>
+</div>
+
+<div class="info_line" >
+    <%= link_to 'Edit', edit_line_item_path(@line_item) %> |
+    <%= link_to 'Back', line_items_path %>
+</div>
